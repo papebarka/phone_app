@@ -1,5 +1,6 @@
 defmodule PhoneApp.Conversations.Schema.Contact do
   use Ecto.Schema
+  import Ecto.Changeset
 
   @timestamps_opts [type: :utc_datetime_usec]
 
@@ -12,4 +13,12 @@ defmodule PhoneApp.Conversations.Schema.Contact do
     timestamps()
   end
 
+  def changeset(attrs) do
+    fields = [:phone_number]
+
+    %__MODULE__{}
+    |> cast(attrs, fields)
+    |> validate_required(fields)
+    |> unique_constraint([:phone_number])
+  end
 end
