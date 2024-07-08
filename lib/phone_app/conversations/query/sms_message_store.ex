@@ -21,7 +21,7 @@ defmodule PhoneApp.Conversations.Query.SmsMessageStore do
 
       existing ->
         update_params
-        |> SmsMessage.update_changeset(exisiting)
+        |> SmsMessage.update_changeset(existing)
         |> Repo.update()
     end
   end
