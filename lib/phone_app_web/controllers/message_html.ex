@@ -18,7 +18,7 @@ defmodule PhoneAppWeb.MessageHTML do
   attr :changeset, Ecto.Changeset, required: true
   attr :contact, Conversations.Schema.Contact, required: false, default: nil
 
-  def message_form(assigns)
+  #def message_form(assigns)
 
   # <.simple_button text="Deliver" type="submit" />
   attr :type, :string, default: "button", values: ["button", "submit"]

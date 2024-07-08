@@ -1,5 +1,5 @@
 defmodule PhoneApp.Conversations do
-  alias PhoneApp.Conversaations.Query
+  alias PhoneApp.Conversations.Query
   alias PhoneApp.Conversations.Schema
 
   defdelegate get_contact!(id), to: Query.ContaactStore
