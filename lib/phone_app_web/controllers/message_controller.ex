@@ -1,4 +1,4 @@
-defmodule PhoneApp.MessageController do
+defmodule PhoneAppWeb.MessageController do
   use PhoneAppWeb, :controller
 
   plug :load_conversation_list
@@ -12,6 +12,10 @@ defmodule PhoneApp.MessageController do
       [] ->
         redirect(conn, to: ~p(/messages/new))
     end
+  end
+
+  def new() do
+
   end
 
   defp load_conversation_list(conn, _params) do
