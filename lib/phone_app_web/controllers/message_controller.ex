@@ -14,7 +14,7 @@ defmodule PhoneAppWeb.MessageController do
     end
   end
 
-  def new() do
+  def new(conn, _params) do
 
   end
 

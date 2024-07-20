@@ -2,10 +2,10 @@ defmodule PhoneApp.Conversations do
   alias PhoneApp.Conversations.Query
   alias PhoneApp.Conversations.Schema
 
-  defdelegate get_contact!(id), to: Query.ContaactStore
+  defdelegate get_contact!(id), to: Query.ContactStore
 
   defdelegate create_sms_message(params), to: Query.SmsMessageStore
-  defdelegate update_sms_message(sid, params), to: QUery.SmsMessageStore
+  defdelegate update_sms_message(sid, params), to: Query.SmsMessageStore
 
   def load_conversation_list do
     messages = Query.SmsMessageStore.load_message_list()
